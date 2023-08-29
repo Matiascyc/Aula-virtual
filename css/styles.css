@@ -1,0 +1,935 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/*NAVBAR*/
+.navbar {
+  font-size: 18px;
+  background-image: linear-gradient(260deg, #0f78be 0%, #707070 100%);
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 10px;
+  z-index: 1;
+}
+
+.main-nav {
+  list-style-type: none;
+  display: none;
+}
+
+.primaria {
+  color: #fff;
+  margin-left: 15%;
+  font-size: 40px;
+  font-weight: bolder;
+  font-family: monospace;
+  filter: drop-shadow(3px 3px rgb(5, 0, 15)) sepia(80%) drop-shadow(-3px -3px rgb(34, 174, 230));
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.main-nav li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.main-nav li a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.name {
+  font-size: 40px;
+  margin-left: 5%;
+  margin-bottom: 1%;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.nav-links {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.main-nav li {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+}
+
+.active {
+  display: block;
+}
+
+.main-nav {
+  display: flex;
+  margin-right: 30px;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.main-nav li {
+  margin: 0;
+}
+
+.nav-links {
+  margin-left: 40px;
+}
+
+.navbar-toggle {
+  display: none;
+}
+
+.nav-links:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+/*VIDEO Y DESCRIPCION*/
+
+.onvideo {
+  display: inline-flex;
+}
+
+.descripcion {
+  z-index: 10;
+  position: absolute;
+  margin-top: 20%;
+  width: 40%;
+  height: auto;
+  background: #00000079;
+  color: #f0ecec;
+  font-size: 25px;
+  font-weight: 900;
+  text-align: center;
+  border-radius: 0px 10px 10px 0px;
+  margin-left: -50%;
+}
+
+.onvideo:hover .descripcion {
+  transition: 1.8s all ease-in-out;
+  transform: translateX(125%);
+  transition-timing-function: cubic-bezier(0.285, 0.135, 0.15, 2)
+}
+
+.mivideo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+  border-bottom: 5px solid black;
+}
+
+/*QUE ES PRIMARIA VIRTUAL*/
+.fondo {
+  background-color: white;
+  min-height: 20vh;
+  display: flex;
+  align-items: center;
+}
+
+.pv {
+  width: 100%;
+  color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 100px;
+  font-weight: bold;
+  background-image: url('/img/1.jpg');
+  background-size: cover;
+  background-position-y: 70%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.pv_descripcion {
+  border: 4px double darkblue;
+  margin: 3%;
+  padding: 5%;
+  font-size: 20px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+
+}
+
+/*JUEGOS*/
+
+.games {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  padding: 2%;
+  color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 100px;
+  font-weight: bolder;
+  font-size: 200px;
+  background-image: url('/img/imgjuegos.jpeg');
+  background-size: contain;
+  background-position-y: 5%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+:root {
+  --background-dark: #2d3548;
+  --text-light: rgba(255, 255, 255, 0.6);
+  --text-lighter: rgba(255, 255, 255, 0.9);
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+  --width-container: 1200px;
+}
+
+.hero-section {
+  align-items: flex-start;
+  background-image: linear-gradient(15deg, #0f4667 0%, #2a6973 150%);
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+  padding: var(--spacing-xxl) var(--spacing-l);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 100%;
+  margin-left: 20%;
+  margin-top: 3%;
+}
+
+@media(min-width: 540px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(min-width: 960px) {
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  list-style: none;
+  position: relative;
+}
+
+.card:before {
+  content: '';
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+}
+
+.card__background {
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--spacing-l);
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  transform: scale(1) translateZ(0);
+  transition:
+    filter 200ms linear,
+    transform 200ms linear;
+}
+
+.card:hover .card__background {
+  transform: scale(1.05) translateZ(0);
+}
+
+.card-grid:hover>.card:not(:hover) .card__background {
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+.card__content {
+  left: 0;
+  padding: var(--spacing-l);
+  position: absolute;
+  top: 0;
+}
+
+.card__category {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-s);
+  text-transform: uppercase;
+}
+
+.card__heading {
+  color: var(--text-lighter);
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+  line-height: 1.4;
+  word-spacing: 100vw;
+}
+
+/*LIBROS DIGITALES*/
+
+.librodig {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  padding: 2%;
+  color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 100px;
+  font-weight: bolder;
+  font-size: 200px;
+  background-image: url('/img/libros.jpg');
+  background-size: contain;
+  background-position-y: 5%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*CARDSLIDER*/
+
+.img-container {
+  position: absolute;
+  height: 600px;
+  width: 900px;
+  perspective: 200px;
+  transform-style: preserve-3d;
+  margin-left: 66%;
+  margin-top: -35%;
+}
+
+.box {
+  box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+  border-radius: 25px;
+  overflow: hidden;
+  border: 1px solid #bbb;
+  position: absolute;
+  top: 50%;
+  transition: 800ms ease-in-out;
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+}
+
+.box:first-of-type {
+  z-index: 5;
+  opacity: 0;
+  left: 15%;
+  transform: translate(-50%, -50%) rotateY(-10deg);
+}
+
+.box:nth-of-type(2) {
+  opacity: 1;
+  left: 20%;
+  transform: translate(-50%, -50%) rotateY(-10deg);
+  z-index: 5;
+
+}
+
+.box:nth-of-type(3) {
+  left: 25%;
+  opacity: 0.75;
+  color: #eee;
+  z-index: 10;
+  transform: translate(-50%, -50%) rotateY(-10deg) translateZ(-50px);
+}
+
+.box:nth-of-type(4) {
+  z-index: 5;
+  opacity: 0.5;
+  left: 30%;
+  transform: translate(-50%, -50%) rotateY(-10deg) translateZ(-100px);
+}
+
+.box:nth-of-type(5) {
+  z-index: 2;
+  opacity: 0.25;
+  left: 35%;
+  transform: translate(-50%, -50%) rotateY(-10deg) translateZ(-150px);
+}
+
+.box:nth-of-type(6) {
+  z-index: 2;
+  opacity: 0.0;
+  left: 40%;
+  transform: translate(-50%, -50%) rotateY(-10deg) translateZ(-200px);
+}
+
+.box {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background: #111845a6;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgb(23, 32, 90);
+  border: 2px solid #2a3cad;
+  color: white;
+  padding: 20px;
+}
+
+.box:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.box:hover:before {
+  left: -50%;
+  transform: skewX(-5deg);
+}
+
+
+.box .content {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border: 1px solid #f0a591;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(9, 0, 0, 0.5);
+
+}
+
+.box span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  box-sizing: border-box;
+
+}
+
+.box span:nth-child(1) {
+  transform: rotate(0deg);
+}
+
+.box span:nth-child(2) {
+  transform: rotate(90deg);
+}
+
+.box span:nth-child(3) {
+  transform: rotate(180deg);
+}
+
+.box span:nth-child(4) {
+  transform: rotate(270deg);
+}
+
+.box span:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #50dfdb;
+  animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  50% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  50.1% {
+    transform: scaleX(1);
+    transform-origin: right;
+
+  }
+
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+
+  }
+}
+
+
+/*VENTANA MODAL*/
+
+
+.modal-window {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.521);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+
+  &:target {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &>div {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: rgba(252, 252, 252, 0.89);
+  }
+
+
+}
+
+.modal-close {
+  color: #ee0000;
+  line-height: 50px;
+  font-size: 30px;
+  position: absolute;
+  right: 0;
+  margin-right: 3%;
+  text-align: center;
+  top: 0;
+  width: 70px;
+  text-decoration: none;
+
+  &:hover {
+    color: black;
+  }
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.modal-window {
+  &>div {
+    border-radius: 1rem;
+    width: 100vw;
+    height: 40vw;
+  }
+}
+
+.modal-window div:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+
+.btn {
+  width: 90%;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  justify-content: flex-end;
+
+}
+
+.portada {
+  width: 100%;
+  justify-content: center;
+  aspect-ratio: 3/2 !important;
+  object-fit: contain
+}
+
+.grupo1 {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10%;
+
+}
+
+.interior {
+  text-align: center;
+  width: 350px;
+}
+
+/*DENTRO DE VENTANA MODAL*/
+.pino1 {
+  width: 300px;
+}
+
+.cuentotext {
+  font-size: 20px;
+  display: flex;
+  font-weight: bold;
+}
+
+.cuentotext1 {
+  font-size: 20px;
+  display: inline;
+  font-weight: bold;
+}
+
+.fin {
+  display: flex;
+  align-items: center;
+  justify-content: space-around
+}
+
+.fin2 {
+  font-weight: 800;
+  font-size: 50px;
+  text-align: center;
+}
+
+.portada {
+  width: 100%;
+  max-width: 250px;
+}
+
+/*AUDIOLIBROS*/
+.audiolibros {
+  display: flex;
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+  color: white;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  padding: 2%;
+  color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 100px;
+  background-image: url('/img/libros.jpg');
+  background-size: contain;
+  background-position-y: 5%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+.audio {
+  background: #fffbd5;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #b20a2c, #fffbd5);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #b20a2c, #fffbd5);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-top: #0f00638f 2px solid;
+  border-bottom: #0f00638f 10px solid;
+}
+
+.audio {
+  display: flex;
+}
+
+.audiocontent {
+  margin: 5%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.carousel-item img {
+  width: auto;
+  height: 800px;
+  max-height: 800px;
+  border: 2px solid black;
+
+}
+
+.audiocontent h2 {
+  color: black;
+  font-weight: 900;
+  font-family: 'Poppins', sans-serif;
+  font-size: 50px;
+  width: 100%;
+  background-color: #fffbd5;
+  border-radius: 40px;
+  border: 2px solid black;
+  border-style: dotted;
+}
+
+/*audio{
+  padding: 300px;
+}*/
+audio::-webkit-media-controls-panel {
+  background-color: cornflowerblue;
+}
+
+audio::-webkit-media-controls-play-button {
+  background-color: rgba(3, 98, 129, 0.281);
+  border-radius: 50%;
+}
+
+audio::-webkit-media-controls-play-button:hover {
+  transform: scale(2, 2);
+}
+
+audio::-webkit-media-controls-current-time-display {
+  color: #333;
+}
+
+audio::-webkit-media-controls-time-remaining-display {
+  color: #333;
+}
+
+audio::-webkit-media-controls-timeline {
+  border-radius: 40px;
+  background-color: rgba(3, 98, 129, 0.281);
+  ;
+}
+
+audio::-webkit-media-controls-volume-slider {
+  background-color: rgba(3, 98, 129, 0.281);
+  ;
+  border-radius: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+audio::-webkit-media-controls-mute-button {
+  background-color: rgba(3, 98, 129, 0.281);
+  border-radius: 50%;
+}
+
+/*CONTACTO*/
+
+.contact_form {
+  width: 460px;
+  height: auto;
+  margin: 80px auto;
+  border-radius: 10px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background-color: #0f78be;
+  padding-left: 30px;
+  border-bottom: pink 5px solid;
+}
+
+.fondoform {
+  background-image: url('/img/form.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: -4.5%;
+  border-bottom: pink 5px solid;
+}
+
+input {
+  background-color: #fbfbfb;
+  width: 408px;
+  height: 40px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(165, 54, 54);
+  margin-top: 10px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  background-color: #fbfbfb;
+  width: 405px;
+  height: 150px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(165, 56, 56);
+  margin-top: 10px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  padding-top: 15px;
+  resize: none;
+}
+
+label {
+  display: block;
+  float: center;
+  font-weight: bolder;
+}
+
+.enviar {
+  height: 45px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  background-color: #000000;
+  border-color: rgb(165, 42, 42);
+  border-style: solid;
+  border-radius: 10px;
+  width: 420px;
+  cursor: pointer;
+}
+
+button p {
+  color: #fff;
+  text-align: center;
+  margin-top: 2%;
+  font-size: 17px;
+  font-weight: bolder;
+}
+
+.enviar:hover {
+  border: white;
+  background-image: url('/img/enviar.gif');
+  background-repeat: repeat-x;
+  background-size: contain
+}
+
+button p:hover {
+  color: transparent
+}
+
+.obligatorio {
+  color: #070005;
+  font-size: 20px;
+}
+
+.obligatorio2 {
+  font-size: 17px;
+  font-weight: bolder;
+}
+
+.aviso {
+  font-size: 13px;
+  color: #0e0e0e;
+}
+
+.titulo1 {
+  font-size: 39px;
+  text-align: center;
+  padding-bottom: 20px;
+  color: rgb(165, 42, 42);
+  font-weight: 900;
+
+}
+
+.titulo2 {
+  font-size: 16px;
+  padding-bottom: 30px;
+  color: #0e0e0e;
+  text-align: center;
+  font-size: 25px;
+}
+
+.pcontacto {
+  font-size: 18px;
+  color: #0e0e0e;
+}
+
+.formulario input:focus {
+  outline: 0;
+  border: 3px solid #a513aaf1;
+}
+
+.formulario textarea:focus {
+  outline: 0;
+  border: 3px solid #a513aaf1;
+}
+
+input {
+  font-weight: bolder;
+}
+
+textarea {
+  font-weight: bolder;
+}
+
+/*FOOTER*/
+.redes {
+  width: 15% !important;
+  aspect-ratio: 3/2 !important;
+  object-fit: contain !important;
+  mix-blend-mode: color-burn !important;
+}
+
+
+.terminos {
+  font-size: 600px !important;
+}
+
+.resources {
+  width: 65% !important;
+  object-fit: contain !important;
+  mix-blend-mode: color-burn white !important;
+}
+
+.container-fluid {
+  margin-top: -4%;
+}
+
+.ontop {
+  width: 50%;
+
+}
+  
+.ontop2 {
+  display: inline-flex;
+  margin-left: 60%;
+  margin-top:  -50%;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 70px;
+    align-items: center;
+  }
+}
