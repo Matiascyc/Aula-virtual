@@ -8,7 +8,7 @@ Está dirigido para que los usuarios accedan a una gama de contenidos para que p
  visual, auditiva (audiolibros). De esta manera la web se convertira en un recurso excepcional para niños y padres que busquen distinto material en un solo lugar.
 
  objetivos especificos: 
-     -Mejorar oratorio.
+     -Mejorar oratoria.
      -Aumentar la capacidad de lectura visual.
      -estimulacion temprana para los mas niños.
      -Entretenimiento en forma de lectura.
