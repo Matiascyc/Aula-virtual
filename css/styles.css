@@ -826,7 +826,7 @@ button p {
 
 .enviar:hover {
   border: white;
-  background-image: url('../img/enviar.gif');
+  background-image: url('/img/enviar.gif');
   background-repeat: repeat-x;
   background-size: contain
 }
